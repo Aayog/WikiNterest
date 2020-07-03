@@ -1,5 +1,5 @@
-{% extends "blog/base.html" %}
-{% load crispy_forms_tags %}
+{% extends "interest_site/base.html" %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
 {% block content %}
 
 <div class="content-section">
@@ -7,7 +7,7 @@
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Log In</legend>
-            {{ form|crispy }}
+            {{ form }}
         </fieldset>
         <div class="form-group">
             <button type="submit" class="btn btn-outline-info">Sign In</button>
