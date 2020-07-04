@@ -1,9 +1,11 @@
 from django.shortcuts import render
-
+from .articles import getArticles
 def home(request):
     context = {
-        'title' : 'HOME'
+        'title' : 'HOME',
+        'articles' : getArticles(10)
     }
+    print(context['articles'])
     return render(request, 'interest_site/home.html', context)
 
 

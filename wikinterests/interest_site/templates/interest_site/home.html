@@ -1,4 +1,8 @@
 {% extends "interest_site/base.html" %}
 {% block content %}
-
+{% for u, summary in articles.items %}
+    <div class="card">
+        {{summary|safe}}
+    </div>
+{% endfor %}
 {% endblock %}
